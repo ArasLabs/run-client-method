@@ -1,25 +1,21 @@
-# Project Name
+# Run Client Method
 
-TODO: Write a project description
+This package adds a method and action to run client-side Methods from the method editor, similar to the built-in Run Server Method action.
 
 ## Project Details
 
 See [TESTSTATUS file](./TESTSTATUS.md) for latest testing information.
 
 #### Built Using:
-Aras 11.0 SPx
+Aras 11.0 SP7
 
 #### Versions Tested:
-Aras 11.0 SPx, Aras 11.0 SPx (open release)
+Aras 11.0 SP7, Aras 11.0 SP5 (open release)
 
 #### Browsers Tested:
 Internet Explorer 11, Firefox 38 ESR, Chrome
 
 > Though built and tested using Aras 11.0 SP7, this project should function in older releases of Aras 11.0 and Aras 10.0.
-
-## How It Works
-
-TODO: Describe how it works
 
 ## Installation
 
@@ -30,15 +26,34 @@ TODO: Describe how it works
 
 1. Aras Innovator installed (version 11.0 SPx preferred)
 2. Aras Package Import tool
-3. .......
+3. RunClientMethod import package
 
 ### Install Steps
 
-TODO: Describe the installation process
+1. Backup your database and store the BAK file in a safe place.
+2. Open up the Aras Package Import tool.
+3. Enter your login credentials and click **Login**
+  * _Note: You must login as root for the package import to succeed!_
+4. Enter the package name in the TargetRelease field.
+  * Optional: Enter a description in the Description field.
+5. Enter the path to your local `..\RunClientMethod\Import\imports.mf` file in the Manifest File field.
+6. Select **RunClientMethod** in the Available for Import field.
+7. Select Type = **Merge** and Mode = **Thorough Mode**.
+8. Click **Import** in the top left corner.
+9. Close the Aras Package Import tool.
+10. (Optional) Execute the contents of [Data\testData.xml](./Data/testData.xml) in Nash or AML Studio to add sample data to your database for testing.
+
+You are now ready to login to Aras and try out the Run Client Method action.
 
 ## Usage
 
-TODO: Write usage instructions
+1. Log in to Aras as admin.
+2. Navigate to **Administration > Methods** in the table of contents (TOC).
+3. Search for a client method you would like to test and open it.
+  * The optional test data contains a method for testing called "test run client method".
+4. Click **Actions > Run Client Method** in the main menu.
+
+The Run Client Method action will display a window with the output returned by the method. If the method does not return a value, the window will be blank.
 
 ## Contributing
 
@@ -52,7 +67,9 @@ For more information on contributing to this project, another Aras Labs project,
 
 ## Credits
 
-TODO: Write credits if others contributed to the project
+Original code written by Jon Hodge for Aras Professional Services.
+
+Documented and published by Eli Donahue for Aras Labs. @EliJDonahue
 
 ## License
 
