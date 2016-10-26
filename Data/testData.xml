@@ -1,0 +1,22 @@
+<AML>
+  <Item type="Method" action="add" id="DF3EE005E1CF4AB9BDF4AA7FF3328BE5">
+    <comments>client method for testing "Run Client Method" action in method editor</comments>
+    <id keyed_name="test client method action" type="Method">DF3EE005E1CF4AB9BDF4AA7FF3328BE5</id>
+    <method_code>
+var corpTZ = this.newItem("Variable","get");
+corpTZ.setProperty("name","CorporateTimeZone");
+corpTZ = corpTZ.apply();
+
+if (corpTZ.isError())
+  return alert(corpTZ.getErrorString());
+
+return corpTZ.getProperty("value","no time zone set");
+    </method_code>
+    <method_type>JavaScript</method_type>
+    <name>test client method action</name>
+  </Item>
+  <Item type="Variable" action="add">
+    <name>CorporateTimeZone</name>
+    <value>Eastern Standard Time</value>
+  </Item>
+</AML>
