@@ -1,0 +1,30 @@
+﻿<AML>
+ <Item type="Method" id="E688886FFB9C4428924DEE843151300D" action="add">
+  <comments>Run a client method from the method editor for testing purposes</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Aras Labs
+// Original Code - Jon Hodge for Aras Professional Services
+// Custom action to run a client method from the method editor, 
+// similar to the default Run Server Method action
+
+var method_name = this.getProperty("name");
+var method_type = this.getProperty("method_type");
+var result;
+
+if (method_type != "JavaScript") {
+    top.aras.AlertError("Not a Client Method");
+    return "Use Run Server Method Action";
+} else {
+    result = top.aras.evalMethod(method_name, this.node.xml);
+}
+
+if (typeof result == "object" && !Array.isArray(result)) {
+    var ss = top.aras.getBaseURL() + "/styles/default.xsl";
+    return result.applyStylesheet(ss, "URL");
+} else {
+    return result;
+}]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>labs_RunClientMethodAction</name>
+ </Item>
+</AML>

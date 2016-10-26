@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="Item Action" id="2F54E66F755642B381B65A4D1B71311C" action="add">
+  <related_id keyed_name="labs_RunClientMethod" type="Action">
+   <Item type="Action" id="52BBBA0F25944FE0A3A2469387F6E641" action="add">
+    <item_query>&lt;Item type="{@type}" id="{@id}" levels= "1" action="get" /&gt;</item_query>
+    <label xml:lang="en">Run Client Method</label>
+    <location>client</location>
+    <method keyed_name="labs_RunClientMethodAction" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>labs_RunClientMethodAction</name>
+     </Item>
+    </method>
+    <target>one window</target>
+    <type>item</type>
+    <name>labs_RunClientMethod</name>
+   </Item>
+  </related_id>
+  <sort_order>384</sort_order>
+  <source_id keyed_name="Method" type="ItemType" name="Method">87879A09B8044DE380D59DF22DE1867F</source_id>
+ </Item>
+</AML>

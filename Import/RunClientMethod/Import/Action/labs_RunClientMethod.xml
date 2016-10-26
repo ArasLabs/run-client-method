@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Action" id="52BBBA0F25944FE0A3A2469387F6E641" action="add">
+  <item_query>&lt;Item type="{@type}" id="{@id}" levels= "1" action="get" /&gt;</item_query>
+  <label xml:lang="en">Run Client Method</label>
+  <location>client</location>
+  <method keyed_name="labs_RunClientMethodAction" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>labs_RunClientMethodAction</name>
+   </Item>
+  </method>
+  <target>one window</target>
+  <type>item</type>
+  <name>labs_RunClientMethod</name>
+ </Item>
+</AML>
