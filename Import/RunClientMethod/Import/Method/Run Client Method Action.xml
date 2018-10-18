@@ -9,17 +9,23 @@
 
 var method_name = this.getProperty("name");
 var method_type = this.getProperty("method_type");
+var method_exAllowed = this.getProperty("execution_allowed_to");
 var result;
 
+if (aras.getIdentityList().indexOf(method_exAllowed) == -1){
+    aras.AlertError("Execution not allowed.");
+    return "Insufficient permissions for method execution [" + method_name + "]";
+}
+
 if (method_type != "JavaScript") {
-    top.aras.AlertError("Not a Client Method");
+    aras.AlertError("Not a Client Method");
     return "Use Run Server Method Action";
 } else {
-    result = top.aras.evalMethod(method_name, this.node.xml);
+    result = aras.evalMethod(method_name, this.node.xml);
 }
 
 if (typeof result == "object" && !Array.isArray(result)) {
-    var ss = top.aras.getBaseURL() + "/styles/default.xsl";
+    var ss = aras.getBaseURL() + "/styles/default.xsl";
     return result.applyStylesheet(ss, "URL");
 } else {
     return result;
