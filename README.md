@@ -2,20 +2,19 @@
 
 This package adds a method and action to run client-side Methods from the method editor, similar to the built-in Run Server Method action.
 
-## Project Details
+## History
 
-See [TESTSTATUS file](./TESTSTATUS.md) for latest testing information.
+Release | Notes
+--------|--------
+[v1.0.1](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.1) | Tested 11.0 SP12, SP15. Tested on Edge, Firefox 60 ESR, Chrome.
+[v1.0.0](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.0) | First release. Tested on Internet Explorer 11, Firefox 38 ESR, Chrome. Though built and tested using Aras 11.0 SP7, this project should function in older releases of Aras 11.0 and Aras 10.0.
 
-#### Built Using:
-Aras 11.0 SP7
+#### Supported Aras Versions
 
-#### Versions Tested:
-Aras 11.0 SP7, Aras 11.0 SP5 (open release)
-
-#### Browsers Tested:
-Internet Explorer 11, Firefox 38 ESR, Chrome
-
-> Though built and tested using Aras 11.0 SP7, this project should function in older releases of Aras 11.0 and Aras 10.0.
+Project | Aras
+--------|------
+[v1.0.1](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.1) | 10.0 SPx, 11.0 SP7+, 11.0 SP12+, 11.0 SP15
+[v1.0.0](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.0) | 10.0 SPx, 11.0 SP7; Old Community Board Migration
 
 ## Installation
 
