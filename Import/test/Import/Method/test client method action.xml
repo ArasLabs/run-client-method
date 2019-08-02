@@ -1,0 +1,18 @@
+﻿<AML>
+ <Item type="Method" id="DF3EE005E1CF4AB9BDF4AA7FF3328BE5" action="add">
+  <comments>client method for testing "Run Client Method" action in method editor</comments>
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[//Get Variable
+var testV = this.newItem("Variable","get");
+testV.setProperty("name","Test Variable");
+testV = testV.apply();
+//If cannot get variable, throw error
+if (testV.isError())
+  return alert(testV.getErrorString());
+//return variable value to new tab
+return testV.getProperty("value","no test variable set");
+    ]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>test client method action</name>
+ </Item>
+</AML>

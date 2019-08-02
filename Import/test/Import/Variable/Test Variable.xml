@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="Variable" id="1938A875F7814D878CF75448E7EF3D00" action="add">
+  <default_value>Test Complete</default_value>
+  <name>Test Variable</name>
+ </Item>
+</AML>
