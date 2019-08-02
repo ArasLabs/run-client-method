@@ -6,6 +6,7 @@ This package adds a method and action to run client-side Methods from the method
 
 Release | Notes
 --------|--------
+ [v1.1.0](https://github.com/ArasLabs/run-client-method/releases/tag/v1.1.0) | Updated Usage for v12; Moved test data from xml into package 
 [v1.0.1](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.1) | Tested 11.0 SP12, SP15. Tested on Edge, Firefox 60 ESR, Chrome.
 [v1.0.0](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.0) | First release. Tested on Internet Explorer 11, Firefox 38 ESR, Chrome. Though built and tested using Aras 11.0 SP7, this project should function in older releases of Aras 11.0 and Aras 10.0.
 
@@ -13,8 +14,9 @@ Release | Notes
 
 Project | Aras
 --------|------
-[v1.0.1](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.1) | 10.0 SPx, 11.0 SP7+, 11.0 SP12+, 11.0 SP15
-[v1.0.0](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.0) | 10.0 SPx, 11.0 SP7; Old Community Board Migration
+ [v1.1.0](https://github.com/ArasLabs/run-client-method/releases/tag/v1.1.0) | 10.0+, 11.0+, 12.0+ 
+[v1.0.1](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.1) | 10.0+, 11.0+ 
+[v1.0.0](https://github.com/ArasLabs/run-client-method/releases/tag/v1.0.0) | 10.0+, 11.0 SP7; Old Community Board Migration 
 
 ## Installation
 
@@ -23,7 +25,7 @@ Project | Aras
 
 ### Pre-requisites
 
-1. Aras Innovator installed (version 11.0 SPx preferred)
+1. Aras Innovator installed (version 12.0 preferred)
 2. Aras Package Import tool
 3. RunClientMethod import package
 
@@ -36,11 +38,10 @@ Project | Aras
 4. Enter the package name in the TargetRelease field.
   * Optional: Enter a description in the Description field.
 5. Enter the path to your local `..\RunClientMethod\Import\imports.mf` file in the Manifest File field.
-6. Select **RunClientMethod** in the Available for Import field.
+6. Select **aras.labs.RunClientMethod** and **aras.labs.RunClientMethod.test** in the Available for Import field.
 7. Select Type = **Merge** and Mode = **Thorough Mode**.
 8. Click **Import** in the top left corner.
 9. Close the Aras Package Import tool.
-10. (Optional) Execute the contents of [Data\testData.xml](./Data/testData.xml) in Nash or AML Studio to add sample data to your database for testing.
 
 You are now ready to login to Aras and try out the Run Client Method action.
 
@@ -49,8 +50,9 @@ You are now ready to login to Aras and try out the Run Client Method action.
 1. Log in to Aras as admin.
 2. Navigate to **Administration > Methods** in the table of contents (TOC).
 3. Search for a client method you would like to test and open it.
-  * The optional test data contains a method for testing called "test run client method".
-4. Click **Actions > Run Client Method** in the main menu.
+- The test package contains a method for testing called "test run client method". It will output a result with “Test Complete”.
+4. Click the More […] menu and **Run Client Method**.
+   - Click **Actions > Run Client Method** in the main menu. (v11)
 
 The Run Client Method action will display a window with the output returned by the method. If the method does not return a value, the window will be blank.
 

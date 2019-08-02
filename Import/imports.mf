@@ -1,3 +1,4 @@
 <imports>
+  <package name="aras.labs.RunClientMethod.test" path="test\Import" />
   <package name="aras.labs.RunClientMethod" path="RunClientMethod\Import" />
 </imports>
